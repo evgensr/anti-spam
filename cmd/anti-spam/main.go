@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/evgensr/anti-spam/internal/app"
 	"github.com/evgensr/anti-spam/internal/config"
@@ -17,8 +16,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	log.Printf("cfg: %+v", cfg)
 
 	l := logging.NewLogger(cfg)
 	defer func() {
