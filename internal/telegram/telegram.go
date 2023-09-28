@@ -16,7 +16,7 @@ type Telegram struct {
 func NewTelegram(c *config.Config) (*Telegram, error) {
 
 	bot, err := tgbotapi.NewBotAPI(c.Telegram.Token)
-	bot.Debug = true
+
 	if err != nil {
 		return nil, err
 	}
