@@ -1,0 +1,23 @@
+App:
+    GoogleCSV: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQpg9Znff5n4SNmtuRpUexEADFSApqQiIgZJEzGEkxyitcQGtjAVJvvXCT8d0C-dvrB6Atcr5lk_fdk/pub?gid=0&single=true&output=csv"
+    GoogleDoc: "https://docs.google.com/spreadsheets/d/13iDwGiUaEgrMAG9d4oLYqf3tJ9pGCC1luWUcmfib5qk/edit#gid=0"
+    LocalNameCSV: "./data/data.csv"
+    RefreshIntervalSec: 3600
+    EnableSoundNotification: false
+    DeleteNotificationNewMember: false
+Telegram:
+    Token: "6206141020:AAFrqeV50RRIaj7uvBqcGeCp-_FAKE"
+    GroupID: -5000000000
+    AdminID:
+        - 5000000000
+        - 5000000000
+Log:
+    Path: "log/telegram.log"
+    MaxSize: 5
+    MaxBackups: 31
+    MaxAge: 31
+    Compress: true
+    LocalTime: false
+
+
+

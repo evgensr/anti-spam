@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  bot:
+    container_name: anti-spambot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    volumes:
+      - ./config:/config
+      - ./data:/data
+      - ./log:/log
