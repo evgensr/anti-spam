@@ -2,7 +2,6 @@ package app
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 	"strings"
 
@@ -99,7 +98,6 @@ func (a *App) Run() {
 			}
 
 			if !a.isChatIDInAdminID(update.Message.Chat.ID, a.cfg.Telegram.AdminID) {
-				log.Println("not admin")
 				continue
 			}
 
@@ -118,6 +116,10 @@ func (a *App) Run() {
 		}
 
 		if update.CallbackQuery != nil {
+
+			if !a.isChatIDInAdminID(update.CallbackQuery.From.ID, a.cfg.Telegram.AdminID) {
+				continue
+			}
 
 			callback := tgbotapi.NewCallback(update.CallbackQuery.ID, update.CallbackQuery.Data)
 
